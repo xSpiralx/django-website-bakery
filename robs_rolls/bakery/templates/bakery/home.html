@@ -1,0 +1,9 @@
+{% extends 'bakery/base.html' %}
+{% block content %}
+<div class="jumbotron text-center">
+    <h1>Welcome to Rob's Rolls</h1>
+    <p>Discover our delicious bakery products!</p>
+    <a href="{% url 'products' %}" class="btn btn-primary btn-lg">View Products</a>
+    <a href="{% url 'weekly_treats' %}" class="btn btn-secondary btn-lg">Weekly Treats</a>
+</div>
+{% endblock %}

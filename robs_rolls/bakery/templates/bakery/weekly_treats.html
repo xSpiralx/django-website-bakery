@@ -1,0 +1,17 @@
+{% extends 'bakery/base.html' %}
+{% block content %}
+<h1 class="text-center my-5">Weekly Treats</h1>
+<div class="row">
+    {% for treat in weekly_treats %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="{{ treat.product.image.url }}" class="card-img-top" alt="{{ treat.product.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ treat.product.name }}</h5>
+                <p class="card-text">{{ treat.week_start }} to {{ treat.week_end }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
