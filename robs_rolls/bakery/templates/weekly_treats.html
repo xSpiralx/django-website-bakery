@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weekly Treats - Rob's Rolls</title>
+</head>
+<body>
+    <h1>Weekly Treats</h1>
+    <ul>
+    {% for treat in weekly_treats %}
+        <li>{{ treat.product.name }} - {{ treat.week_start }} to {{ treat.week_end }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'home' %}">Home</a>
+</body>
+</html>
