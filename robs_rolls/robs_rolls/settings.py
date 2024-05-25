@@ -25,11 +25,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bakery',
-    'django.contrib.sites',
+    'django.contrib.sites',  # Ensure this is included
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'bakery',
 ]
 
 MIDDLEWARE = [
@@ -119,6 +119,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
